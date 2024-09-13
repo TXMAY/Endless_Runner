@@ -4,14 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SceneryManager : MonoBehaviour
+public class SceneryManager : Singleton<SceneryManager>
 {
     [SerializeField] Image screenImage;
-
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
 
     void OnEnable()
     {

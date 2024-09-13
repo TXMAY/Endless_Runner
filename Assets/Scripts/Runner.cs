@@ -21,6 +21,11 @@ public class Runner : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
     }
+
+    void OnEnable()
+    {
+        InputManager.Instance.action += OnKeyUpdate;
+    }
     void Start()
     {
         roadLine = RoadLine.MIDDLE;
@@ -48,13 +53,13 @@ public class Runner : MonoBehaviour
         );
     }
 
-    void Update()
-    {
-        OnKeyUpdate();
-    }
-
     void FixedUpdate()
     {
         Move();
+    }
+
+    void OnDisable()
+    {
+        InputManager.Instance.action-=OnKeyUpdate;
     }
 }
