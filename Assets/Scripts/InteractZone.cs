@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class InteractZone : MonoBehaviour
 {
-    void Start()
+    void OnTriggerEnter(Collider other)
     {
-        
-    }
+        IInteractable interactable = other.GetComponent<IInteractable>();
 
-    void Update()
-    {
-        
+        if (interactable != null) interactable.Interact();
     }
 }

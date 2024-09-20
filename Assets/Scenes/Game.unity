@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.050980397, g: 0.37254903, b: 0.7803922, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.0175
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  offset: 40
   roads:
   - {fileID: 1013007262}
   - {fileID: 1833142653}
@@ -565,6 +566,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Third Road
       objectReference: {fileID: 0}
+    - target: {fileID: 8044635899869150139, guid: d959a82dbbcd1964494f333fc8450ef4, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8044635899869150139, guid: d959a82dbbcd1964494f333fc8450ef4, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8044635899869150139, guid: d959a82dbbcd1964494f333fc8450ef4, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 331829552}
+    - target: {fileID: 8044635899869150139, guid: d959a82dbbcd1964494f333fc8450ef4, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8044635899869150139, guid: d959a82dbbcd1964494f333fc8450ef4, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InitializePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 8044635899869150139, guid: d959a82dbbcd1964494f333fc8450ef4, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoadManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8044635899869150139, guid: d959a82dbbcd1964494f333fc8450ef4, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -715,6 +744,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 331829553}
     m_Modifications:
+    - target: {fileID: 1661763191120612195, guid: 203ff72e6a9615a42a0ac9ac11e2d3df, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661763191120612195, guid: 203ff72e6a9615a42a0ac9ac11e2d3df, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661763191120612195, guid: 203ff72e6a9615a42a0ac9ac11e2d3df, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 331829552}
+    - target: {fileID: 1661763191120612195, guid: 203ff72e6a9615a42a0ac9ac11e2d3df, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661763191120612195, guid: 203ff72e6a9615a42a0ac9ac11e2d3df, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InitializePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661763191120612195, guid: 203ff72e6a9615a42a0ac9ac11e2d3df, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoadManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661763191120612195, guid: 203ff72e6a9615a42a0ac9ac11e2d3df, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7873187647639627562, guid: 203ff72e6a9615a42a0ac9ac11e2d3df, type: 3}
       propertyPath: m_Name
       value: Second Road
@@ -927,6 +984,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: First Road
       objectReference: {fileID: 0}
+    - target: {fileID: 4379782585743964502, guid: a683707dc6bebc44097ca8a57425fcb2, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379782585743964502, guid: a683707dc6bebc44097ca8a57425fcb2, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379782585743964502, guid: a683707dc6bebc44097ca8a57425fcb2, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 331829552}
+    - target: {fileID: 4379782585743964502, guid: a683707dc6bebc44097ca8a57425fcb2, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379782585743964502, guid: a683707dc6bebc44097ca8a57425fcb2, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InitializePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379782585743964502, guid: a683707dc6bebc44097ca8a57425fcb2, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoadManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379782585743964502, guid: a683707dc6bebc44097ca8a57425fcb2, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7828429299272351004, guid: a683707dc6bebc44097ca8a57425fcb2, type: 3}
     m_RemovedGameObjects: []
@@ -951,6 +1036,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 331829553}
     m_Modifications:
+    - target: {fileID: -7527639367744354566, guid: 9481eab8f0eb99048b930013ee9dc26a, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7527639367744354566, guid: 9481eab8f0eb99048b930013ee9dc26a, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7527639367744354566, guid: 9481eab8f0eb99048b930013ee9dc26a, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 331829552}
+    - target: {fileID: -7527639367744354566, guid: 9481eab8f0eb99048b930013ee9dc26a, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7527639367744354566, guid: 9481eab8f0eb99048b930013ee9dc26a, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InitializePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: -7527639367744354566, guid: 9481eab8f0eb99048b930013ee9dc26a, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoadManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -7527639367744354566, guid: 9481eab8f0eb99048b930013ee9dc26a, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4683698669332398923, guid: 9481eab8f0eb99048b930013ee9dc26a, type: 3}
       propertyPath: m_RootOrder
       value: -1
