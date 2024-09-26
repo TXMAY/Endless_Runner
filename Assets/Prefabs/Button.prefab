@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 6531950914786002513}
   - component: {fileID: 3696658758442520529}
   - component: {fileID: 8432500292534584472}
-  - component: {fileID: 2963460724062727910}
+  - component: {fileID: 1016615507355015163}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -221,8 +221,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2963460724062727910}
-          m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        - m_Target: {fileID: 1016615507355015163}
+          m_TargetAssemblyTypeName: SelectButton, Assembly-CSharp
           m_MethodName: OnEnter
           m_Mode: 1
           m_Arguments:
@@ -237,8 +237,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2963460724062727910}
-          m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        - m_Target: {fileID: 1016615507355015163}
+          m_TargetAssemblyTypeName: SelectButton, Assembly-CSharp
           m_MethodName: OnLeave
           m_Mode: 1
           m_Arguments:
@@ -253,8 +253,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2963460724062727910}
-          m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        - m_Target: {fileID: 1016615507355015163}
+          m_TargetAssemblyTypeName: SelectButton, Assembly-CSharp
           m_MethodName: OnSelect
           m_Mode: 1
           m_Arguments:
@@ -265,7 +265,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &2963460724062727910
+--- !u!114 &1016615507355015163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1978534234180959420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31db6aedb856dff479feb9b449f81373, type: 3}
+  m_Script: {fileID: 11500000, guid: c90cf50920ab8cb46a6835aaa8294fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: {fileID: 0}

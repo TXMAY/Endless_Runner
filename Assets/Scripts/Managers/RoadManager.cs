@@ -7,6 +7,8 @@ public class RoadManager : MonoBehaviour
     [SerializeField] float speed = 5.0f;
     [SerializeField] float offset = 40.0f;
     [SerializeField] List<GameObject> roads;
+    [SerializeField] GameObject speedManager;
+
     void Start()
     {
         roads.Capacity = 10;
@@ -14,6 +16,7 @@ public class RoadManager : MonoBehaviour
 
     void Update()
     {
+        speed=speedManager.GetComponent<SpeedManager>().Speed;
         for (int i = 0; i < roads.Count; i++)
         {
             roads[i].transform.Translate(Vector3.back * speed * Time.deltaTime);

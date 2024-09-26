@@ -13,14 +13,6 @@ public class SceneryManager : Singleton<SceneryManager>
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(AsyncLoad(1));
-        }
-    }
-
     public IEnumerator FadeIn()
     {
         screenImage.gameObject.SetActive(true);
