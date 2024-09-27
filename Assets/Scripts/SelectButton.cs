@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class SelectButton : MonoBehaviour
 {
     [SerializeField] Text buttonText;
+
+    [SerializeField] AudioClip enterAudioClip;
     void Awake()
     {
         buttonText = GetComponentInChildren<Text>();
@@ -14,6 +16,8 @@ public class SelectButton : MonoBehaviour
     public void OnEnter()
     {
         buttonText.fontSize = 72;
+
+        AudioManager.Instance.Listen(enterAudioClip);
     }
 
     public void OnLeave()
