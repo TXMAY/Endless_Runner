@@ -11,14 +11,16 @@ public enum RoadLine
 
 public class Runner : MonoBehaviour
 {
+    [SerializeField] Animator animator;
     [SerializeField] RoadLine roadLine;
     [SerializeField] Rigidbody rigidbody;
 
     [SerializeField] float speed = 25.0f;
-    [SerializeField] float positionX = 2.5f;
+    [SerializeField] float positionX = 4f;
 
     void Awake()
     {
+        animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -35,11 +37,19 @@ public class Runner : MonoBehaviour
     {
         if (roadLine != RoadLine.LEFT && Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            roadLine--;
+            if (roadLine != RoadLine.LEFT)
+            {
+                animator.Play("Left Avoid");
+                roadLine--;
+            }
         }
         if (roadLine != RoadLine.RIGHT && Input.GetKeyDown(KeyCode.RightArrow))
         {
-            roadLine++;
+            if (roadLine != RoadLine.RIGHT)
+            {
+                animator.Play("Right Avoid");
+                roadLine++;
+            }
         }
     }
 
@@ -60,6 +70,6 @@ public class Runner : MonoBehaviour
 
     void OnDisable()
     {
-        InputManager.Instance.action-=OnKeyUpdate;
+        InputManager.Instance.action -= OnKeyUpdate;
     }
 }

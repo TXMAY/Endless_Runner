@@ -3655,10 +3655,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29954671769a1404685360ee0af8911d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   roadLine: 0
   rigidbody: {fileID: 0}
   speed: 25
-  positionX: 2.5
+  positionX: 4
 --- !u!54 &5551418573686530429
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CoinManager : MonoBehaviour
 {
-    [SerializeField] GameObject prefab;
     [SerializeField] List<GameObject> coins;
 
     [SerializeField] float offset = 2.5f;
@@ -20,10 +19,12 @@ public class CoinManager : MonoBehaviour
     {
         for (int i = 0; i < createCount; i++)
         {
-            GameObject clone = Instantiate(prefab);
-            clone.transform.SetParent(gameObject.transform);
-            clone.transform.localPosition = new Vector3(0, prefab.transform.position.y, offset * i);
+            GameObject clone = ResourcesManager.Instance.Instantiate("Coin", gameObject.transform);
+
+            clone.transform.localPosition = new Vector3(0, 0.825f, offset * i);
+
             clone.SetActive(false);
+
             coins.Add(clone);
         }
     }
@@ -31,10 +32,10 @@ public class CoinManager : MonoBehaviour
     public void InitializePosition()
     {
         transform.localPosition = new Vector3(Random.Range(-1, 2) * positionX, 0, 0);
-        //for (int i = 0; i < coins.Count; i++)
-        //{
-        //    coins[i].SetActive(true);
-        //    coins[i].transform.SetParent(gameObject.transform);
-        //}
+
+        foreach (GameObject clone in coins)
+        {
+            clone.SetActive(true);
+        }
     }
 }
