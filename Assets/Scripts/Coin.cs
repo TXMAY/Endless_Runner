@@ -1,13 +1,15 @@
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class Coin : State
 {
     [SerializeField] float speed;
 
     [SerializeField] GameObject rotationGameObject;
 
-    void OnEnable()
+    new void OnEnable()
     {
+        base.OnEnable();
+
         rotationGameObject = GameObject.Find("RotationGameObject");
 
         transform.localRotation = rotationGameObject.transform.localRotation;
@@ -16,6 +18,8 @@ public class Coin : MonoBehaviour
     }
     void Update()
     {
+        if (state == false) return;
+
         transform.Rotate(0, speed * Time.deltaTime, 0);
     }
 }

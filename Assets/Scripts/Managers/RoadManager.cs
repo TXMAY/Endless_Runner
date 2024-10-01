@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoadManager : MonoBehaviour
+public class RoadManager : State
 {
     [SerializeField] float speed = 5.0f;
     [SerializeField] float offset = 40.0f;
@@ -16,6 +16,8 @@ public class RoadManager : MonoBehaviour
 
     void Update()
     {
+        if (state == false) return;
+
         speed = speedManager.GetComponent<SpeedManager>().Speed;
         for (int i = 0; i < roads.Count; i++)
         {
