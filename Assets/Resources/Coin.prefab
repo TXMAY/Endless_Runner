@@ -121,4 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8af43afe332304f8d946246abea831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 1
+  speed: 0
   rotationGameObject: {fileID: 0}

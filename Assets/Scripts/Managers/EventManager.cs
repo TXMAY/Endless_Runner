@@ -30,6 +30,26 @@ public class EventManager
             unityEvent.AddListener(unityAction);
             dictionary.Add(eventType, unityEvent);
         }
-}
+    }
+
+    public static void Unsubscribe(EventType eventType, UnityAction unityAction)
+    {
+        UnityEvent unityEvent;
+
+        if (dictionary.TryGetValue(eventType, out unityEvent))
+        {
+            unityEvent.RemoveListener(unityAction);
+        }
+    }
+
+    public static void Publisher(EventType eventType)
+    {
+        UnityEvent unityEvent;
+
+        if (dictionary.TryGetValue(eventType, out unityEvent))
+        {
+            unityEvent.Invoke();
+        }
+    }
 }
 

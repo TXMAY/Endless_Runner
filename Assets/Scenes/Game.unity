@@ -260,6 +260,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd9831e6f3d6c5c4cb89ce50b29bda07, type: 3}
+--- !u!1 &306252883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 306252884}
+  - component: {fileID: 306252885}
+  m_Layer: 0
+  m_Name: ObstacleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &306252884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306252883}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &306252885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306252883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7ced8042b7e144087fa00c91e5c7c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacles: []
+  createCount: 5
 --- !u!1 &331829551
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2874585890e22a64c879a9c8d0ad5b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 1
   speed: 10
   offset: 40
   roads:
@@ -3655,6 +3702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29954671769a1404685360ee0af8911d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 1
   animator: {fileID: 0}
   roadLine: 0
   rigidbody: {fileID: 0}

@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class State : MonoBehaviour
 {
-    [SerializeField] protected bool state;
+    [SerializeField] protected bool state = true;
 
 
     protected void OnEnable()
     {
-        Debug.Log("Event Register");
+        EventManager.Subscribe(EventType.START, OnExecute);
+        EventManager.Subscribe(EventType.STOP, OnStop);
     }
 
     protected void OnExecute()
@@ -24,6 +25,7 @@ public class State : MonoBehaviour
 
     protected void OnDisable()
     {
-        Debug.Log("Event Release");
+        EventManager.Unsubscribe(EventType.START, OnExecute);
+        EventManager.Unsubscribe(EventType.STOP, OnStop);
     }
 }
