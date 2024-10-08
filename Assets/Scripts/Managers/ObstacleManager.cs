@@ -59,10 +59,12 @@ public class ObstacleManager : MonoBehaviour
 
                 random = (random + 1) % obstacles.Count;
             }
-
-            obstacles[random].SetActive(true);
-
-            
+            //obstacles[random].SetActive(true);
         }
+    }
+
+    public GameObject GetObstacle()
+    {
+        return obstacles[random];
     }
 }

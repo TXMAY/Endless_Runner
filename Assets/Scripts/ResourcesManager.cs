@@ -25,8 +25,6 @@ public class ResourcesManager : Singleton<ResourcesManager>
 
         clone.name = clone.name.Substring(0, index);
 
-        Debug.Log(clone.name);
-
         return clone;
     }
 }
