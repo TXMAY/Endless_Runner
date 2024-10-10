@@ -2,15 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class Obstacle : MonoBehaviour, IHitable
 {
-    void Start()
+    public void Activate()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        EventManager.Publisher(EventType.STOP);
     }
 }

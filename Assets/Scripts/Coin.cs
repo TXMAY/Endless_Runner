@@ -1,10 +1,15 @@
 using UnityEngine;
 
-public class Coin : State
+public class Coin : State, IHitable
 {
     [SerializeField] float speed;
 
     [SerializeField] GameObject rotationGameObject;
+
+    public void Activate()
+    {
+        gameObject.SetActive(false);
+    }
 
     new void OnEnable()
     {
